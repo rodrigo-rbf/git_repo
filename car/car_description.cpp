@@ -22,3 +22,10 @@ void car::Car_description::set_max_speed(double velocity){
 double car::Car_description::get_max_speed(){
     return velocity;
 }
+
+
+//Falta incluir quilometros rodados.
+double car::Car_description::get_km_driven(){
+    return driven;
+}
+
