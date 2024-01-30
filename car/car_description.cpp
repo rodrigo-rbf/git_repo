@@ -24,3 +24,6 @@ double car::Car_description::get_max_speed(){
 }
 
 //Falta incluir quilometros rodados.
+double car::Car_description::get_km_driven(){
+    return driven;
+}
