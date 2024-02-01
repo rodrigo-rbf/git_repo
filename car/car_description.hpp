@@ -28,10 +28,13 @@ namespace car {
             std::string get_color();
             void set_max_speed(double velocity);
             double get_max_speed();
+            void _set_km_driven(double driven);
+            double get_km_driven();
         
         private:
             Color color;
             double velocity;
+            double driven;
             //Speed velocity;
             //Velocity veloc;        
         
