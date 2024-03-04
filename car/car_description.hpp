@@ -2,37 +2,18 @@
 #define CAR_DESCRIPTION_HPP
 
 
-#include <string>
-#include <iostream>
-#include <vector>
+#include "automobile.hpp"
 
-namespace car {
-    enum class Color{
-        Green,
-        Yellow,
-        Blue,
-        White,
-        Red,
-        Black,
-        Pink,
-        Brown
-    };
-    const std::vector<std::string> Color_str = {"Verde", "Amarelo", "Azul", "Branco", "Vermelho", "Preto", "Rosa", "Marrom"};
+namespace automobile {
 
-    class Car_description{
+    class Car_description : public automobile::Automobile{
         public:
             Car_description(){};
-            Car_description(Color color, double velocity = 80.0);
-            ~Car_description(){std::cout << "INFO\n";};
-            void set_color(Color color);
-            std::string get_color();
-            void set_max_speed(double velocity);
-            double get_max_speed();
-            void _set_km_driven(double driven);
-            double get_km_driven();
+            Car_description(automobile::Color color, double velocity = 80.0);
+            //~Car_description(){std::cout << "INFO-Car_description\n";};
         
         private:
-            Color color;
+            automobile::Color color;
             double velocity;
             double driven;
             //Speed velocity;
