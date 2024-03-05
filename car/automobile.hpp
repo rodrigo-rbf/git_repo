@@ -33,7 +33,7 @@ namespace automobile {
             double get_km_driven();
 
             virtual int read_tachometer() = 0;
-            // virtual void instantaneous_speed_calculation(std::string encoder) = 0;
+            virtual void instantaneous_speed_calculation(std::string encoder) = 0;
         
         private:
             Color color;

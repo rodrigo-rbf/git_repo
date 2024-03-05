@@ -1,5 +1,9 @@
+#include <cstdlib>
+#include <ctime>
+
 #include "car_description.hpp"
 
+ define RAND_MAX = 100;
 
 automobile::Car_description::Car_description(automobile::Color color, double velocity) : 
     color(color),
@@ -7,6 +11,7 @@ automobile::Car_description::Car_description(automobile::Color color, double vel
 {}
 
 int automobile::Car_description::read_tachometer(){
-    // realiza a leitura do instrumento específico
-    return 0;
+    std::srand(std::time(nullptr)); // use current time as seed for random generator
+    int random_value = std::rand();
+    return random_value;
 }
