@@ -18,7 +18,10 @@ double automobile::Automobile::get_max_speed(){
     return velocity;
 }
 
-// //Falta incluir quilometros rodados.
-// double automobile::Automobile::get_km_driven(){
-//     return driven;
-// }
+void automobile::Automobile::set_km_driven(double driven){
+    this->driven = driven;
+}
+
+double automobile::Automobile::get_km_driven(){
+    return driven;
+}
