@@ -11,6 +11,8 @@ namespace automobile {
             Car_description(){};
             Car_description(automobile::Color color, double velocity = 80.0);
             //~Car_description(){std::cout << "INFO-Car_description\n";};
+
+            int read_tachometer();
         
         private:
             automobile::Color color;

@@ -32,7 +32,7 @@ namespace automobile {
             void set_km_driven(double driven);
             double get_km_driven();
 
-            // virtual int read_tachometer() = 0;
+            virtual int read_tachometer() = 0;
             // virtual void instantaneous_speed_calculation(std::string encoder) = 0;
         
         private:
