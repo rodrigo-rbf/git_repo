@@ -16,9 +16,9 @@ int automobile::Car_description::read_tachometer(){
     return random_value;
 }
 
-double automobile::Car_description::instantaneous_speed_calculation(int encoder){
+double automobile::Car_description::instantaneous_speed_calculation(){
     int dt = automobile::Car_description::read_tachometer();
-    double ds = 0.01; 
+    double ds = 1.5; 
     double veloc = ds/dt*1000;
     return veloc;
 }

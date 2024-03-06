@@ -13,6 +13,7 @@ int main(int argc, char** argv){
     std::cout << "Carro 01:" << car_b.get_color() << '\n';
     std::cout << "Carro 02:" << car_y.get_color() << '\n';
     std::cout << "Carro 03:" << car_r.get_color() << '\n';
+    std::cout << "Velocidade instantanea do Carro 03 RED " << car_r.instantaneous_speed_calculation() << "km/h\n";
 
     return 0;
 }

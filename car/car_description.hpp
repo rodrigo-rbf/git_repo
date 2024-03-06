@@ -13,7 +13,7 @@ namespace automobile {
             //~Car_description(){std::cout << "INFO-Car_description\n";};
 
             int read_tachometer();
-            double instantaneous_speed_calculation(int encoder);
+            double instantaneous_speed_calculation();
         
         private:
             automobile::Color color;
