@@ -22,3 +22,13 @@ double automobile::Car_description::instantaneous_speed_calculation(){
     double veloc = ds/dt*1000;
     return veloc;
 }
+
+automobile::Gps_coordinates automobile::Car_description::gps_convert(double latitude, double longitude){
+    automobile::Gps_coordinates coordinate;
+    coordinate.grau = 23;
+    coordinate.minute = 52;
+    coordinate.second = 0.5298;
+    coordinate.cardinal_point = automobile::Gps_coordinates::Cardinal_point::N;
+
+    return coordinate;
+}
