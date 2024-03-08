@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
 
 #include "car_description.hpp"
 
@@ -23,12 +24,19 @@ double automobile::Car_description::instantaneous_speed_calculation(){
     return veloc;
 }
 
-automobile::Gps_coordinates automobile::Car_description::gps_convert(double latitude, double longitude){
-    automobile::Gps_coordinates coordinate;
-    coordinate.grau = 23;
-    coordinate.minute = 52;
-    coordinate.second = 0.5298;
-    coordinate.cardinal_point = automobile::Gps_coordinates::Cardinal_point::N;
-
-    return coordinate;
+automobile::Gps_coordinates automobile::Car_description::gps_convert(double latitude, double longitude)
+{
+    automobile::Gps_coordinates coordinate_lat;
+    double decimal_part;
+    
+    coordinate_lat.grau = static_cast<int>(std::floor(latitude));
+    decimal_part = (latitude - coordinate_lat.grau) * 60;
+    coordinate_lat.minute = static_cast<int>(std::floor(latitude));
+    coordinate_lat.second = (latitude - coordinate_lat.minute) * 60;
+    
+    std::cout << "coordinate.grau: " << coordinate_lat.grau << std::endl;
+    std::cout << "coordinate.minute: " << coordinate_lat.minute << std::endl;
+    std::cout << "coordinate.second: " << coordinate_lat.second << std::endl;
+    
+    return coordinate_lat;
 }
