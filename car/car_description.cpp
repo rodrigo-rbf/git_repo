@@ -28,11 +28,11 @@ automobile::Gps_coordinates automobile::Car_description::gps_convert(double lati
 {
     automobile::Gps_coordinates coordinate_lat;
     double decimal_part;
-    
-    coordinate_lat.grau = static_cast<int>(std::floor(latitude));
+
+    coordinate_lat.grau = std::round<int>(latitude);
     decimal_part = (latitude - coordinate_lat.grau) * 60;
-    coordinate_lat.minute = static_cast<int>(std::floor(latitude));
-    coordinate_lat.second = (latitude - coordinate_lat.minute) * 60;
+    coordinate_lat.minute = std::round<int>(decimal_part);
+    coordinate_lat.second = (decimal_part - coordinate_lat.minute) * 60;
     
     std::cout << "coordinate.grau: " << coordinate_lat.grau << std::endl;
     std::cout << "coordinate.minute: " << coordinate_lat.minute << std::endl;
@@ -40,3 +40,7 @@ automobile::Gps_coordinates automobile::Car_description::gps_convert(double lati
     
     return coordinate_lat;
 }
+
+// Lat Long (-22.866822, -43.448518)
+                // GPS Coordinates 22° 52' 0.5592'' S 43° 26' 54.6648'' W
+
