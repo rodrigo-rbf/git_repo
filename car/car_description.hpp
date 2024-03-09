@@ -14,6 +14,7 @@ namespace automobile {
 
             int read_tachometer();
             double instantaneous_speed_calculation();
+            Gps_coordinates gps_convert(double latitude, double longitude);
         
         private:
             automobile::Color color;

@@ -7,6 +7,20 @@
 #include <vector>
 
 namespace automobile {
+    
+    struct Gps_coordinates{
+        int grau;
+        int minute;
+        double second;
+        enum class Cardinal_point{
+            N, // North,
+            S, // South,
+            E, // East,
+            W // West
+        };
+        Cardinal_point cardinal_point; // Membro para armazenar o ponto cardeal
+    };
+
     enum class Color{
         Green,
         Yellow,
@@ -34,6 +48,13 @@ namespace automobile {
 
             virtual int read_tachometer() = 0;
             virtual double instantaneous_speed_calculation() = 0;
+
+            virtual Gps_coordinates gps_convert(double latitude, double longitude) = 0;
+
+                // Lat Long (-22.866822, -43.448518)
+                // GPS Coordinates 22° 52' 0.5592'' S 43° 26' 54.6648'' W
+
+            
         
         private:
             Color color;

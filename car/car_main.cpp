@@ -15,5 +15,9 @@ int main(int argc, char** argv){
     std::cout << "Carro 03:" << car_r.get_color() << '\n';
     std::cout << "Velocidade instantanea do Carro 03 RED " << car_r.instantaneous_speed_calculation() << "km/h\n";
 
+    car_b.gps_convert(-22.866822, -43.448518);
+     // Lat Long (-22.866822, -43.448518)
+                // GPS Coordinates 22° 52' 0.5592'' S 43° 26' 54.6648'' W
+
     return 0;
 }
