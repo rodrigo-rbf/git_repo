@@ -3,15 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Lorenzo Britto</title>
+    <title>FAMÍLIA BRITTO</title>
   </head>
   <body>
     <img src="firefox.jpeg" alt="minha página de teste" />
     <img src="eu.jpeg" alt="Rodrigo de Britto Florencio" />
+    <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWnPGoSW3JVb2v8jYHIvWngBmg3dtPMpJYeV-y4q4hMt8yRQfCS0T1Buho4d6cNkQ6msY&usqp=CAU"/></p>
 	<h1>Rodrigo de Britto Florencio</h1>
 	<h2>Aline Muller de Britto</h2>
 	<h3>Lorenzo Muller de Britto</h3>
 	<h4>Florença Muller de Britto</h4>
+	
+	<ul>
+  <li>
+    hello
+  </li>
+  <li>
+    world
+  </li>
+</ul>
+
+<ul>
+  <li>
+    hello
+  </li>
+  <li>
+    world
+  </li>
+</ul>
+
 
   </body>
 </html>
